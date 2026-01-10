@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Information</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+
+  <form
+    method="POST"
+    action="/submit"
+    class="w-full max-w-2xl bg-white rounded-2xl shadow-xl p-8"
+  >
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="text-3xl font-semibold text-gray-900 mb-2">
+        Personal Information
+      </h1>
+      <p class="text-gray-600">
+        Tell us about yourself to get personalized meal recommendations
+      </p>
+    </div>
+
+    <!-- Basic Info -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <div>
+        <label class="text-sm font-medium text-gray-700 block mb-2">Age *</label>
+        <input name="age" type="number" required
+          class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500">
+      </div>
+
+      <div>
+        <label class="text-sm font-medium text-gray-700 block mb-2">Weight (kg) *</label>
+        <input name="weight" type="number" required
+          class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500">
+      </div>
+
+      <div>
+        <label class="text-sm font-medium text-gray-700 block mb-2">Height (cm) *</label>
+        <input name="height" type="number" required
+          class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500">
+      </div>
+    </div>
+
+    <!-- Activity Level -->
+    <div class="mb-6">
+      <label class="text-sm font-medium text-gray-700 block mb-2">
+        Activity Level *
+      </label>
+      <select name="activityLevel" required
+        class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500">
+        <option value="">Select activity level</option>
+        <option value="sedentary">Sedentary</option>
+        <option value="light">Light</option>
+        <option value="moderate">Moderate</option>
+        <option value="active">Active</option>
+        <option value="very-active">Very Active</option>
+      </select>
+    </div>
+
+    <!-- Goal -->
+    <div class="mb-6">
+      <label class="text-sm font-medium text-gray-700 block mb-2">
+        Goal *
+      </label>
+      <select name="goal" required
+        class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500">
+        <option value="">Select goal</option>
+        <option value="lose-weight">Lose Weight</option>
+        <option value="maintain">Maintain</option>
+        <option value="gain-weight">Gain Weight</option>
+        <option value="build-muscle">Build Muscle</option>
+        <option value="improve-health">Improve Health</option>
+      </select>
+    </div>
+
+    <!-- Dietary Restrictions -->
+    <div class="pt-4 border-t mb-6">
+      <p class="font-medium mb-3">Dietary Restrictions</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        {% for item in [
+          "Vegetarian","Vegan","Gluten-Free","Dairy-Free",
+          "Nut Allergies","Halal","Kosher","Pescatarian"
+        ] %}
+        <label class="flex items-center gap-2">
+          <input type="checkbox" name="dietaryRestrictions" value="{{ item }}">
+          <span>{{ item }}</span>
+        </label>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Dining Halls -->
+    <div class="pt-4 border-t mb-6">
+      <p class="font-medium mb-3">Dining Halls</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        {% for hall in [
+          "North Campus Dining","South Campus Dining",
+          "West Campus Dining","East Campus Dining",
+          "Central Cafeteria","Student Union Food Court"
+        ] %}
+        <label class="flex items-center gap-2">
+          <input type="checkbox" name="diningHalls" value="{{ hall }}">
+          <span>{{ hall }}</span>
+        </label>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <button
+      class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-4 rounded-lg font-medium">
+      Continue
+    </button>
+
+    <p class="text-xs text-gray-500 mt-3 text-center">
+      * Required fields
+    </p>
+  </form>
+
+</body>
+</html>
