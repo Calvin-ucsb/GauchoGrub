@@ -14,7 +14,10 @@ def home():
 def signup():
     data = request.get_json(force=True)
     email = data["email"].strip().lower()
-    password = data["password"]
+    try:
+        password = normalize_password(data["password"])
+    except ValueError as e:
+        return {"error": str(e)}, 400
 
     if db.users.find_one({"email": email}):
         return {"error": "Email already exists"}, 409
@@ -33,7 +36,10 @@ def signup():
 def login():
     data = request.get_json(force=True)
     email = data["email"].strip().lower()
-    password = data["password"]
+    try:
+        password = normalize_password(data["password"])
+    except ValueError as e:
+        return {"error": str(e)}, 400
 
     user = db.users.find_one({"email": email})
     if not user or not bcrypt.verify(password, user["password_hash"]):
@@ -97,3 +103,9 @@ def list_items():
 def delete_item(item_id):
     res = db.items.delete_one({"_id": ObjectId(item_id)})
     return {"deleted": res.deleted_count}
+
+def normalize_password(pw: str) -> str:
+    pw = pw.strip()
+    if len(pw.encode("utf-8")) > 72:
+        raise ValueError("Password too long (max 72 bytes).")
+    return pw
