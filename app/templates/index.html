@@ -92,23 +92,6 @@
       </div>
     </div>
 
-    <!-- Dining Halls -->
-    <div class="pt-4 border-t mb-6">
-      <p class="font-medium mb-3">Dining Halls</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-        {% for hall in [
-          "North Campus Dining","South Campus Dining",
-          "West Campus Dining","East Campus Dining",
-          "Central Cafeteria","Student Union Food Court"
-        ] %}
-        <label class="flex items-center gap-2">
-          <input type="checkbox" name="diningHalls" value="{{ hall }}">
-          <span>{{ hall }}</span>
-        </label>
-        {% endfor %}
-      </div>
-    </div>
-
     <!-- Submit -->
     <button
       class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-4 rounded-lg font-medium">
