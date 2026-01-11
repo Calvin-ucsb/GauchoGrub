@@ -95,10 +95,10 @@ Create a personalized meal plan that:
 5. Provides balanced nutrition (adequate protein, healthy fats, complex carbs)
 
 Restrictions Per Dining Hall: 
-- If at Ortega, can only select one entree item per meal. 
+- If at Ortega, can only select one entree, one side, one desert, and one piece of fruit (apple, orange, banana [you can estimate the average nutrition facts for these pieces of fruit]) per meal. There are no drinks available. 
 - If at any other dining hall, can select multiple items to meet nutritional needs.
 
-IMPORTANT: Use as many items as needed, including duplicates, to meet nutritional goals while adhering to restrictions.
+IMPORTANT: Use as many items as needed, including duplicates, to meet nutritional goals while adhering to restrictions. 
 
 OUTPUT FORMAT (JSON ONLY - NO MARKDOWN, NO PREAMBLE):
 {{
