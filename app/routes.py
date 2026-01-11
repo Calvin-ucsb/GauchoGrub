@@ -1,12 +1,45 @@
 from flask import Blueprint, render_template, request
 from .db import db
 from bson.objectid import ObjectId
+from passlib.hash import bcrypt
+from datetime import datetime, timezone
 
 bp = Blueprint("main", __name__)
 
 @bp.get("/")
 def home():
     return render_template("index.html")
+
+@bp.post("/signup")
+def signup():
+    data = request.get_json(force=True)
+    email = data["email"].strip().lower()
+    password = data["password"]
+
+    if db.users.find_one({"email": email}):
+        return {"error": "Email already exists"}, 409
+
+    user_doc = {
+        "email": email,
+        "name": data.get("name", ""),
+        "password_hash": bcrypt.hash(password),
+        "created_at": datetime.now(timezone.utc),
+    }
+    res = db.users.insert_one(user_doc)
+
+    return {"user_id": str(res.inserted_id)}, 201
+
+@bp.post("/login")
+def login():
+    data = request.get_json(force=True)
+    email = data["email"].strip().lower()
+    password = data["password"]
+
+    user = db.users.find_one({"email": email})
+    if not user or not bcrypt.verify(password, user["password_hash"]):
+        return {"error": "Invalid credentials"}, 401
+
+    return {"user_id": str(user["_id"])}
 
 @bp.post("/submit")
 def submit():
