@@ -1,9 +1,14 @@
 from google import genai
 import json
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+api_key = os.environ.get("GENAI_API_KEY")
 
 # Initialize Gemini client
-client = genai.Client(api_key="PASTE API KEY HERE")
+client = genai.Client(api_key=api_key)
 
 # Load menu data from JSON file
 def load_menu_data():
