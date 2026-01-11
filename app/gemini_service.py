@@ -18,9 +18,9 @@ def load_menu_data():
     current_dir = os.path.dirname(os.path.abspath(__file__))
     # Go up one level to the project root
     project_root = os.path.dirname(current_dir)
-    # Construct path to testData.json
-    json_path = os.path.join(project_root, 'testData.json')
-    
+    # Construct path to ucsb_dining_data.json
+    json_path = os.path.join(project_root, 'ucsb_dining_data.json')
+
     with open(json_path, 'r') as f:
         return json.load(f)
     
@@ -92,6 +92,8 @@ Create a personalized meal plan that:
 Restrictions Per Dining Hall: 
 - If at Ortega, can only select one entree item per meal. 
 - If at any other dining hall, can select multiple items to meet nutritional needs.
+
+IMPORTANT: Use as many items as needed, including duplicates, to meet nutritional goals while adhering to restrictions.
 
 OUTPUT FORMAT (JSON ONLY - NO MARKDOWN, NO PREAMBLE):
 {{
