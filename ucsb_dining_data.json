@@ -1,0 +1,846 @@
+[
+  {
+    "name": "Takeout at Ortega Commons",
+    "unit_id": 1,
+    "meals": [
+      {
+        "name": "Ortega's Daily Menu",
+        "meal_id": null,
+        "items": [
+          {
+            "name": "Korean Chicken & Rice",
+            "serving_size": "Plate (389g)",
+            "calories": 340.0,
+            "protein": 24.0,
+            "total_carbohydrates": 47.0,
+            "total_fat": 12.0
+          },
+          {
+            "name": "Bacon Breakfast Burrito",
+            "serving_size": "Burrito (420g)",
+            "calories": 1100.0,
+            "protein": 43.0,
+            "total_carbohydrates": 78.0,
+            "total_fat": 67.0
+          },
+          {
+            "name": "Creamy Pesto Pasta with Chicken",
+            "serving_size": "12 OZ (342g)",
+            "calories": 610.0,
+            "protein": 31.0,
+            "total_carbohydrates": 72.0,
+            "total_fat": 27.0
+          },
+          {
+            "name": "Macaroni & Cheese (v)",
+            "serving_size": "16 OZ (482g)",
+            "calories": 1040.0,
+            "protein": 46.0,
+            "total_carbohydrates": 109.0,
+            "total_fat": 45.0
+          },
+          {
+            "name": "Chicken Caesar Salad",
+            "serving_size": "Salad (283g)",
+            "calories": 570.0,
+            "protein": 45.0,
+            "total_carbohydrates": 21.0,
+            "total_fat": 38.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "De La Guerra Dining Commons",
+    "unit_id": 3,
+    "meals": [
+      {
+        "name": "Dinner",
+        "meal_id": 244972,
+        "items": [
+          {
+            "name": "Cream of Tomato Soup (v)",
+            "serving_size": "6 oz Ladle (183g)",
+            "calories": 70.0,
+            "protein": 1.0,
+            "total_carbohydrates": 8.0,
+            "total_fat": 4.5
+          },
+          {
+            "name": "Lemon Chicken Quarter",
+            "serving_size": "Quarter (230g)",
+            "calories": 430.0,
+            "protein": 61.0,
+            "total_carbohydrates": 2.0,
+            "total_fat": 17.0
+          },
+          {
+            "name": "Rice Pilaf (vgn)",
+            "serving_size": "1/2 Cup (95g)",
+            "calories": 110.0,
+            "protein": 2.0,
+            "total_carbohydrates": 22.0,
+            "total_fat": 1.0
+          },
+          {
+            "name": "Fresh Broccoli Spears (vgn)",
+            "serving_size": "1/2 Cup (114g)",
+            "calories": 40.0,
+            "protein": 3.0,
+            "total_carbohydrates": 8.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Baked Potato (vgn)",
+            "serving_size": "Potato (144g)",
+            "calories": 120.0,
+            "protein": 3.0,
+            "total_carbohydrates": 29.0,
+            "total_fat": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Brunch",
+        "meal_id": 244995,
+        "items": [
+          {
+            "name": "Vegetable Noodle Soup (vgn)",
+            "serving_size": "6 oz Ladle (206g)",
+            "calories": 80.0,
+            "protein": 2.0,
+            "total_carbohydrates": 14.0,
+            "total_fat": 1.0
+          },
+          {
+            "name": "Italian Wrap",
+            "serving_size": "1/2 Wrap (283g)",
+            "calories": 650.0,
+            "protein": 27.0,
+            "total_carbohydrates": 32.0,
+            "total_fat": 46.0
+          },
+          {
+            "name": "Vegetable Medley (vgn)",
+            "serving_size": "1/2 Cup (113g)",
+            "calories": 30.0,
+            "protein": 1.0,
+            "total_carbohydrates": 7.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Baked Potato (vgn)",
+            "serving_size": "Potato (144g)",
+            "calories": 120.0,
+            "protein": 3.0,
+            "total_carbohydrates": 29.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Pepperoni Pizza",
+            "serving_size": "Slice (114g)",
+            "calories": 310.0,
+            "protein": 12.0,
+            "total_carbohydrates": 28.0,
+            "total_fat": 16.0
+          }
+        ]
+      },
+      {
+        "name": "Always Available",
+        "meal_id": null,
+        "items": [
+          {
+            "name": "Organic Mixed Spring Lettuce (vgn)",
+            "serving_size": "1/2 Cup (28g)",
+            "calories": 0.0,
+            "protein": 1.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Salad Mix Iceberg & Romaine (vgn)",
+            "serving_size": "1/2 Cup (28g)",
+            "calories": 5.0,
+            "protein": 0.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Organic Baby Spinach (vgn)",
+            "serving_size": "1/2 Cup (28g)",
+            "calories": 10.0,
+            "protein": 1.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Cucumbers Slices (vgn)",
+            "serving_size": "2-Slice (57g)",
+            "calories": 10.0,
+            "protein": 0.0,
+            "total_carbohydrates": 2.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Cauliflower Florette (vgn)",
+            "serving_size": "2 Pieces (28g)",
+            "calories": 5.0,
+            "protein": 0.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Barbecue Sauce (vgn)",
+            "serving_size": "Tablespoon (18g)",
+            "calories": 30.0,
+            "protein": 0.0,
+            "total_carbohydrates": 7.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Cholula Hot Sauce (vgn)",
+            "serving_size": "Teaspoon (5g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Tabasco Sauce (vgn)",
+            "serving_size": "Teaspoon (5g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Pico Pica Hot Sauce (vgn)",
+            "serving_size": "Teaspoon (5g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Low Sodium Tamari Soy Sauce (vgn)",
+            "serving_size": "Tablespoon (0g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "White Pullman Bread (vgn)",
+            "serving_size": "Slice (41g)",
+            "calories": 100.0,
+            "protein": 3.0,
+            "total_carbohydrates": 19.0,
+            "total_fat": 1.5
+          },
+          {
+            "name": "Wheat Bread (vgn)",
+            "serving_size": "Slice (37g)",
+            "calories": 90.0,
+            "protein": 4.0,
+            "total_carbohydrates": 16.0,
+            "total_fat": 1.5
+          },
+          {
+            "name": "Sourdough Bread (vgn)",
+            "serving_size": "Slice (43g)",
+            "calories": 120.0,
+            "protein": 5.0,
+            "total_carbohydrates": 24.0,
+            "total_fat": 1.0
+          },
+          {
+            "name": "Sourdough English Muffin (vgn)",
+            "serving_size": "Muffin (66g)",
+            "calories": 130.0,
+            "protein": 6.0,
+            "total_carbohydrates": 24.0,
+            "total_fat": 0.5
+          },
+          {
+            "name": "Cheerios Cereal (vgn)",
+            "serving_size": "1/2 Cup (14g)",
+            "calories": 50.0,
+            "protein": 1.0,
+            "total_carbohydrates": 10.0,
+            "total_fat": 1.0
+          },
+          {
+            "name": "Half & Half (v)",
+            "serving_size": "Ounce (28g)",
+            "calories": 35.0,
+            "protein": 1.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 3.5
+          },
+          {
+            "name": "Lowfat Milk (v)",
+            "serving_size": "8 Ounces (227g)",
+            "calories": 90.0,
+            "protein": 8.0,
+            "total_carbohydrates": 11.0,
+            "total_fat": 2.0
+          },
+          {
+            "name": "Nonfat Milk (v)",
+            "serving_size": "8 Ounces (227g)",
+            "calories": 45.0,
+            "protein": 0.0,
+            "total_carbohydrates": 6.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Whole Milk (v)",
+            "serving_size": "8 Ounces (227g)",
+            "calories": 140.0,
+            "protein": 7.0,
+            "total_carbohydrates": 10.0,
+            "total_fat": 7.0
+          },
+          {
+            "name": "Almond Milk (w/nuts) (vgn)",
+            "serving_size": "8 Ounces (227g)",
+            "calories": 60.0,
+            "protein": 1.0,
+            "total_carbohydrates": 8.0,
+            "total_fat": 2.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Carrillo Dining Commons",
+    "unit_id": 9,
+    "meals": [
+      {
+        "name": "Dinner",
+        "meal_id": 247385,
+        "items": [
+          {
+            "name": "Sticky Rice (vgn)",
+            "serving_size": "1/2 Cup (71g)",
+            "calories": 70.0,
+            "protein": 1.0,
+            "total_carbohydrates": 15.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Chicken Pad Thai with Peanut (w/nuts)",
+            "serving_size": "10 OZ (447g)",
+            "calories": 1050.0,
+            "protein": 30.0,
+            "total_carbohydrates": 189.0,
+            "total_fat": 17.0
+          },
+          {
+            "name": "Vegetable Pad Thai w/Peanut(w/nuts)(vgn)",
+            "serving_size": "Cup (190g)",
+            "calories": 510.0,
+            "protein": 8.0,
+            "total_carbohydrates": 101.0,
+            "total_fat": 8.0
+          },
+          {
+            "name": "Potato Leek Soup (v)",
+            "serving_size": "6 oz Ladle (173g)",
+            "calories": 110.0,
+            "protein": 2.0,
+            "total_carbohydrates": 11.0,
+            "total_fat": 7.0
+          },
+          {
+            "name": "Lemon Baked Salmon",
+            "serving_size": "4 oz. (104g)",
+            "calories": 150.0,
+            "protein": 25.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 4.5
+          }
+        ]
+      },
+      {
+        "name": "Brunch",
+        "meal_id": 247408,
+        "items": [
+          {
+            "name": "Sliced Turkey",
+            "serving_size": "Slice (28g)",
+            "calories": 30.0,
+            "protein": 6.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.5
+          },
+          {
+            "name": "Sliced Turkey Pastrami",
+            "serving_size": "Slice (28g)",
+            "calories": 30.0,
+            "protein": 4.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 1.5
+          },
+          {
+            "name": "Sliced Swiss Cheese (v)",
+            "serving_size": "Slice (21g)",
+            "calories": 80.0,
+            "protein": 7.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 6.0
+          },
+          {
+            "name": "Sliced Cheddar Cheese (v)",
+            "serving_size": "Slice (21g)",
+            "calories": 90.0,
+            "protein": 5.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 7.0
+          },
+          {
+            "name": "Chicken Congee",
+            "serving_size": "6 oz. Ladle (183g)",
+            "calories": 45.0,
+            "protein": 3.0,
+            "total_carbohydrates": 4.0,
+            "total_fat": 1.5
+          }
+        ]
+      },
+      {
+        "name": "Always Available",
+        "meal_id": null,
+        "items": [
+          {
+            "name": "Organic Mixed Spring Lettuce (vgn)",
+            "serving_size": "1/2 Cup (28g)",
+            "calories": 0.0,
+            "protein": 1.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Baby Spinach (vgn)",
+            "serving_size": "1/2 Cup (28g)",
+            "calories": 5.0,
+            "protein": 1.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Romiane Lettuce",
+            "serving_size": "1/4 Cup (21g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Cucumber (vgn)",
+            "serving_size": "2 Slices (28g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Cauliflower Florette (vgn)",
+            "serving_size": "2 Pieces (28g)",
+            "calories": 5.0,
+            "protein": 0.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "A1 Steak Sauce (vgn)",
+            "serving_size": "Tablespoon (14g)",
+            "calories": 15.0,
+            "protein": 0.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Malt Vinegar (vgn)",
+            "serving_size": "Tablespoon (14g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Low Sodium Tamari Soy Sauce (vgn)",
+            "serving_size": "Tablespoon (0g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Hot Chile Sriracha Sauce (vgn)",
+            "serving_size": "Teaspoon (5g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Ground Black Pepper (vgn)",
+            "serving_size": "1/2 Teaspoon (2g)",
+            "calories": 5.0,
+            "protein": 0.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "White Pullman Bread (vgn)",
+            "serving_size": "Slice (41g)",
+            "calories": 100.0,
+            "protein": 3.0,
+            "total_carbohydrates": 19.0,
+            "total_fat": 1.5
+          },
+          {
+            "name": "Wheat Bread (vgn)",
+            "serving_size": "Slice (37g)",
+            "calories": 90.0,
+            "protein": 4.0,
+            "total_carbohydrates": 16.0,
+            "total_fat": 1.5
+          },
+          {
+            "name": "Sourdough Bread (vgn)",
+            "serving_size": "Slice (43g)",
+            "calories": 120.0,
+            "protein": 5.0,
+            "total_carbohydrates": 24.0,
+            "total_fat": 1.0
+          },
+          {
+            "name": "Sourdough English Muffin (vgn)",
+            "serving_size": "Muffin (66g)",
+            "calories": 130.0,
+            "protein": 6.0,
+            "total_carbohydrates": 24.0,
+            "total_fat": 0.5
+          },
+          {
+            "name": "Honey Nut Cheerios Cereal (w/nuts)",
+            "serving_size": "1/2 Cup (18g)",
+            "calories": 70.0,
+            "protein": 1.0,
+            "total_carbohydrates": 15.0,
+            "total_fat": 1.0
+          },
+          {
+            "name": "Half & Half (v)",
+            "serving_size": "Ounce (28g)",
+            "calories": 35.0,
+            "protein": 1.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 3.5
+          },
+          {
+            "name": "Lowfat Milk (v)",
+            "serving_size": "8 Ounces (227g)",
+            "calories": 90.0,
+            "protein": 8.0,
+            "total_carbohydrates": 11.0,
+            "total_fat": 2.0
+          },
+          {
+            "name": "Nonfat Milk (v)",
+            "serving_size": "8 Ounces (227g)",
+            "calories": 45.0,
+            "protein": 0.0,
+            "total_carbohydrates": 6.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Whole Milk (v)",
+            "serving_size": "8 Ounces (227g)",
+            "calories": 140.0,
+            "protein": 7.0,
+            "total_carbohydrates": 10.0,
+            "total_fat": 7.0
+          },
+          {
+            "name": "Almond Milk (w/nuts) (vgn)",
+            "serving_size": "8 Ounces (227g)",
+            "calories": 60.0,
+            "protein": 1.0,
+            "total_carbohydrates": 8.0,
+            "total_fat": 2.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Portola Dining Commons",
+    "unit_id": 15,
+    "meals": [
+      {
+        "name": "Dinner",
+        "meal_id": 246910,
+        "items": [
+          {
+            "name": "Baked Potato (vgn)",
+            "serving_size": "Potato (182g)",
+            "calories": 160.0,
+            "protein": 3.0,
+            "total_carbohydrates": 37.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Jasmine Rice (vgn)",
+            "serving_size": "1/2 Cup (71g)",
+            "calories": 100.0,
+            "protein": 2.0,
+            "total_carbohydrates": 22.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Chicken White Bean Chili",
+            "serving_size": "6 oz Ladle (330g)",
+            "calories": 410.0,
+            "protein": 24.0,
+            "total_carbohydrates": 41.0,
+            "total_fat": 16.0
+          },
+          {
+            "name": "Grilled BBQ Chicken Pizza",
+            "serving_size": "Slice (114g)",
+            "calories": 280.0,
+            "protein": 15.0,
+            "total_carbohydrates": 31.0,
+            "total_fat": 11.0
+          },
+          {
+            "name": "Pasta Primavera w/Tomato Sauce (vgn)",
+            "serving_size": "3/4 Cup (170g)",
+            "calories": 150.0,
+            "protein": 6.0,
+            "total_carbohydrates": 28.0,
+            "total_fat": 1.5
+          }
+        ]
+      },
+      {
+        "name": "Brunch",
+        "meal_id": 246912,
+        "items": [
+          {
+            "name": "Grapefruit Halves (vgn)",
+            "serving_size": "Half (227g)",
+            "calories": 90.0,
+            "protein": 2.0,
+            "total_carbohydrates": 24.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Honeydew Melon (vgn)",
+            "serving_size": "Slice (142g)",
+            "calories": 50.0,
+            "protein": 1.0,
+            "total_carbohydrates": 13.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Watermelon (vgn)",
+            "serving_size": "Slice (125g)",
+            "calories": 35.0,
+            "protein": 1.0,
+            "total_carbohydrates": 9.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Seedless Red Grape (vgn)",
+            "serving_size": "10 Grapes (142g)",
+            "calories": 90.0,
+            "protein": 1.0,
+            "total_carbohydrates": 24.0,
+            "total_fat": 0.5
+          },
+          {
+            "name": "Buckwheat Granola (w/nuts) (v)",
+            "serving_size": "6 oz (252g)",
+            "calories": 510.0,
+            "protein": 12.0,
+            "total_carbohydrates": 65.0,
+            "total_fat": 25.0
+          }
+        ]
+      },
+      {
+        "name": "Always Available",
+        "meal_id": null,
+        "items": [
+          {
+            "name": "Organic Mixed Spring Lettuce (vgn)",
+            "serving_size": "1/2 Cup (28g)",
+            "calories": 0.0,
+            "protein": 1.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Organic Baby Spinach (vgn)",
+            "serving_size": "1/2 Cup (28g)",
+            "calories": 10.0,
+            "protein": 1.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Romiane Lettuce",
+            "serving_size": "1/4 Cup (21g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Kale Salad Mix (vgn)",
+            "serving_size": "1/2 Cup (57g)",
+            "calories": 10.0,
+            "protein": 1.0,
+            "total_carbohydrates": 2.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Organic Cherry Tomato (vgn)",
+            "serving_size": "2 Tomatoes (45g)",
+            "calories": 10.0,
+            "protein": 1.0,
+            "total_carbohydrates": 2.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Low Sodium Tamari Soy Sauce (vgn)",
+            "serving_size": "Tablespoon (0g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Tabasco Sauce (vgn)",
+            "serving_size": "Teaspoon (5g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Tapatio Sauce (vgn)",
+            "serving_size": "Teaspoon (5g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Hot Chile Sriracha Sauce (vgn)",
+            "serving_size": "Teaspoon (5g)",
+            "calories": 0.0,
+            "protein": 0.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Ground Black Pepper (vgn)",
+            "serving_size": "1/2 Teaspoon (2g)",
+            "calories": 5.0,
+            "protein": 0.0,
+            "total_carbohydrates": 0.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "White Pullman Bread (vgn)",
+            "serving_size": "Slice (41g)",
+            "calories": 100.0,
+            "protein": 3.0,
+            "total_carbohydrates": 19.0,
+            "total_fat": 1.5
+          },
+          {
+            "name": "Wheat Bread (vgn)",
+            "serving_size": "Slice (37g)",
+            "calories": 90.0,
+            "protein": 4.0,
+            "total_carbohydrates": 16.0,
+            "total_fat": 1.5
+          },
+          {
+            "name": "Sourdough Bread (vgn)",
+            "serving_size": "Slice (43g)",
+            "calories": 120.0,
+            "protein": 5.0,
+            "total_carbohydrates": 24.0,
+            "total_fat": 1.0
+          },
+          {
+            "name": "Sourdough English Muffin (vgn)",
+            "serving_size": "Muffin (66g)",
+            "calories": 130.0,
+            "protein": 6.0,
+            "total_carbohydrates": 24.0,
+            "total_fat": 0.5
+          },
+          {
+            "name": "Lucky Charms Cereal",
+            "serving_size": "1/2 Cup (18g)",
+            "calories": 70.0,
+            "protein": 1.0,
+            "total_carbohydrates": 15.0,
+            "total_fat": 1.0
+          },
+          {
+            "name": "Half & Half (v)",
+            "serving_size": "Ounce (28g)",
+            "calories": 35.0,
+            "protein": 1.0,
+            "total_carbohydrates": 1.0,
+            "total_fat": 3.5
+          },
+          {
+            "name": "Lowfat Milk (v)",
+            "serving_size": "8 Ounces (227g)",
+            "calories": 90.0,
+            "protein": 8.0,
+            "total_carbohydrates": 11.0,
+            "total_fat": 2.0
+          },
+          {
+            "name": "Nonfat Milk (v)",
+            "serving_size": "8 Ounces (227g)",
+            "calories": 45.0,
+            "protein": 0.0,
+            "total_carbohydrates": 6.0,
+            "total_fat": 0.0
+          },
+          {
+            "name": "Whole Milk (v)",
+            "serving_size": "8 Ounces (227g)",
+            "calories": 140.0,
+            "protein": 7.0,
+            "total_carbohydrates": 10.0,
+            "total_fat": 7.0
+          },
+          {
+            "name": "Almond Milk (w/nuts) (vgn)",
+            "serving_size": "8 Ounces (227g)",
+            "calories": 60.0,
+            "protein": 1.0,
+            "total_carbohydrates": 8.0,
+            "total_fat": 2.5
+          }
+        ]
+      }
+    ]
+  }
+]
