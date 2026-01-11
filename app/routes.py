@@ -129,16 +129,13 @@ def generate_meals():
     try:
         meal_plan = generate_meal_plan(request_data)
         
-        # Store the meal plan in session or return it
+        # Store the meal plan in session
         session['meal_plan'] = meal_plan
         
-        # For now, return JSON for testing
-        # Later you'll render a template with this data
-        return jsonify({
-            'success': True,
-            'meal_plan': meal_plan,
-            'request_data': request_data  # Include for debugging
-        })
+        # Render the output page with the meal plan
+        return render_template("output.html", 
+                             meal_plan=meal_plan,
+                             user_profile=user_profile)
         
     except Exception as e:
         return jsonify({

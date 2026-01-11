@@ -89,6 +89,10 @@ Create a personalized meal plan that:
 4. Aligns with the user's goal: {user_profile['goal']}
 5. Provides balanced nutrition (adequate protein, healthy fats, complex carbs)
 
+Restrictions Per Dining Hall: 
+- If at Ortega, can only select one entree item per meal. 
+- If at any other dining hall, can select multiple items to meet nutritional needs.
+
 OUTPUT FORMAT (JSON ONLY - NO MARKDOWN, NO PREAMBLE):
 {{
   "meal_plan": [

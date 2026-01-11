@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Takeout at Ortega Commons",
+    "unit_id": 1,
+    "meals": [
+      {
+        "name": "Ortega's Daily Menu",
+        "meal_id": null,
+        "items": [
+          {
+            "name": "Korean Chicken & Rice",
+            "serving_size": "Plate (389g)",
+            "calories": 340.0,
+            "protein": 24.0,
+            "total_carbohydrates": 47.0,
+            "total_fat": 12.0
+          },
+          {
+            "name": "Bacon Breakfast Burrito",
+            "serving_size": "Burrito (420g)",
+            "calories": 1100.0,
+            "protein": 43.0,
+            "total_carbohydrates": 78.0,
+            "total_fat": 67.0
+          },
+          {
+            "name": "Creamy Pesto Pasta with Chicken",
+            "serving_size": "12 OZ (342g)",
+            "calories": 610.0,
+            "protein": 31.0,
+            "total_carbohydrates": 72.0,
+            "total_fat": 27.0
+          },
+          {
+            "name": "Macaroni & Cheese (v)",
+            "serving_size": "16 OZ (482g)",
+            "calories": 1040.0,
+            "protein": 46.0,
+            "total_carbohydrates": 109.0,
+            "total_fat": 45.0
+          },
+          {
+            "name": "Chicken Caesar Salad",
+            "serving_size": "Salad (283g)",
+            "calories": 570.0,
+            "protein": 45.0,
+            "total_carbohydrates": 21.0,
+            "total_fat": 38.0
+          }
+        ]
+      }
+    ]
+  }
+]
