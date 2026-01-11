@@ -17,6 +17,9 @@
       {{ calories }} kcal/day
     </p>
 
+    <p id="current_date" class="text-center text-gray-600 mb-6"></p>
+
+
     <form method="POST" action="/meals">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -61,49 +64,76 @@
 
   <!-- JavaScript -->
   <script>
-    function updateMeals() {
-      const count = document.getElementById("meal_swipes").value;
-      const container = document.getElementById("meal_menus");
-      container.innerHTML = "";
+  function getFormattedDate() {
+    const today = new Date();
+    return today.toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
+  }
 
-      for (let i = 1; i <= count; i++) {
-        container.innerHTML += `
-          <div class="border rounded-lg p-4 bg-gray-50">
-            <h3 class="font-semibold text-lg mb-3">Meal #${i}</h3>
+  function isWeekend() {
+    const day = new Date().getDay();
+    return day === 0 || day === 6; // Sunday or Saturday
+  }
 
-            <label class="block text-sm font-medium text-gray-700 mb-1">
-              Dining Hall
-            </label>
-            <select
-              name="meal_${i}_hall"
-              required
-              class="w-full mb-3 px-3 py-2 border rounded-lg bg-white"
-            >
-              <option value="">Select dining hall</option>
-              <option value="Ortega">Ortega</option>
-              <option value="Portola">Portola</option>
-              <option value="Carrillo">Carrillo</option>
-              <option value="De La Guerra">De La Guerra</option>
-            </select>
+  // Display date on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("current_date").textContent =
+      `Today is ${getFormattedDate()}`;
+  });
 
-            <label class="block text-sm font-medium text-gray-700 mb-1">
-              Meal of the Day
-            </label>
-            <select
-              name="meal_${i}_type"
-              required
-              class="w-full px-3 py-2 border rounded-lg bg-white"
-            >
-              <option value="">Select meal</option>
-              <option value="Breakfast">Breakfast</option>
-              <option value="Lunch">Lunch</option>
-              <option value="Dinner">Dinner</option>
-            </select>
-          </div>
-        `;
-      }
+  function updateMeals() {
+    const count = document.getElementById("meal_swipes").value;
+    const container = document.getElementById("meal_menus");
+    container.innerHTML = "";
+
+    const weekend = isWeekend();
+
+    const diningHalls = weekend
+      ? ["Portola", "Carrillo", "De La Guerra"]
+      : ["Ortega", "Portola", "Carrillo", "De La Guerra"];
+
+    const mealTypes = weekend
+      ? ["Brunch", "Dinner"]
+      : ["Breakfast", "Lunch", "Dinner"];
+
+    for (let i = 1; i <= count; i++) {
+      container.innerHTML += `
+        <div class="border rounded-lg p-4 bg-gray-50">
+          <h3 class="font-semibold text-lg mb-3">Meal #${i}</h3>
+
+          <label class="block text-sm font-medium text-gray-700 mb-1">
+            Dining Hall
+          </label>
+          <select
+            name="meal_${i}_hall"
+            required
+            class="w-full mb-3 px-3 py-2 border rounded-lg bg-white"
+          >
+            <option value="">Select dining hall</option>
+            ${diningHalls.map(hall => `<option value="${hall}">${hall}</option>`).join("")}
+          </select>
+
+          <label class="block text-sm font-medium text-gray-700 mb-1">
+            Meal of the Day
+          </label>
+          <select
+            name="meal_${i}_type"
+            required
+            class="w-full px-3 py-2 border rounded-lg bg-white"
+          >
+            <option value="">Select meal</option>
+            ${mealTypes.map(meal => `<option value="${meal}">${meal}</option>`).join("")}
+          </select>
+        </div>
+      `;
     }
-  </script>
+  }
+</script>
+
 
 </body>
 </html>
