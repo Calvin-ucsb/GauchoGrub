@@ -93,6 +93,7 @@ def submit():
         'weight': weight,
         'height': height,
         'activity_level': activity,
+        'gender': gender,
         'goal': goal,
         'dietary_restrictions': dietary_restrictions,
         'target_calories': tdee

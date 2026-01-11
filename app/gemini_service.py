@@ -63,8 +63,9 @@ def generate_meal_plan(request_data):
     user_context = f"""
 USER PROFILE:
 - Age: {user_profile['age']} years
-- Weight: {user_profile['weight']} kg
-- Height: {user_profile['height']} cm
+- Weight: {user_profile['weight']} lbs
+- Height: {user_profile['height']} in
+
 - Activity Level: {user_profile['activity_level']}
 - Goal: {user_profile['goal']}
 - Dietary Restrictions: {', '.join(user_profile['dietary_restrictions']) if user_profile['dietary_restrictions'] else 'None'}
