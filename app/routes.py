@@ -1,4 +1,6 @@
 from flask import Blueprint, render_template, request
+from .db import db
+from bson.objectid import ObjectId
 
 bp = Blueprint("main", __name__)
 
@@ -38,3 +40,27 @@ def submit():
     tdee = round(tdee)
 
     return render_template("result.html", calories=tdee)
+
+@bp.get("/health")
+def health():
+    # quick DB ping
+    db.command("ping")
+    return {"ok": True}
+
+@bp.post("/items")
+def create_item():
+    data = request.get_json(force=True)
+    res = db.items.insert_one({"name": data["name"]})
+    return {"id": str(res.inserted_id)}, 201
+
+@bp.get("/items")
+def list_items():
+    items = list(db.items.find().limit(50))
+    for it in items:
+        it["_id"] = str(it["_id"])
+    return {"items": items}
+
+@bp.delete("/items/<item_id>")
+def delete_item(item_id):
+    res = db.items.delete_one({"_id": ObjectId(item_id)})
+    return {"deleted": res.deleted_count}
