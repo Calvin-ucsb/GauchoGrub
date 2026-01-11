@@ -59,14 +59,8 @@ def submit():
     goal = request.form.get("goal")
     dietary_restrictions = request.form.getlist("dietaryRestrictions")
     
-    gender = request.form.get("gender")
-    if gender == "male":
-        bmr = 10 * (weight/2.2) + 6.25 * (height/0.397) - 5 * age + 5
-    else:
-        bmr = 10 * (weight/2.2) + 6.25 * (height/0.397) - 5 * age - 161
-
     # BMR calculation (assuming gender-neutral for simplicity)
-    #bmr = 10 * (weight/2.2) + 6.25 * (height/0.393701) - 5 * age + 5  # +5 for men, -161 for women if gender included
+    bmr = 10 * weight + 6.25 * height - 5 * age + 5  # +5 for men, -161 for women if gender included
 
     # Activity multiplier
     activity_multipliers = {
@@ -135,13 +129,16 @@ def generate_meals():
     try:
         meal_plan = generate_meal_plan(request_data)
         
-        # Store the meal plan in session
+        # Store the meal plan in session or return it
         session['meal_plan'] = meal_plan
         
-        # Render the output page with the meal plan
-        return render_template("output.html", 
-                             meal_plan=meal_plan,
-                             user_profile=user_profile)
+        # For now, return JSON for testing
+        # Later you'll render a template with this data
+        return jsonify({
+            'success': True,
+            'meal_plan': meal_plan,
+            'request_data': request_data  # Include for debugging
+        })
         
     except Exception as e:
         return jsonify({
@@ -149,32 +146,7 @@ def generate_meals():
             'error': str(e)
         }), 500
 
-@bp.get("/health")
-def health():
-    # quick DB ping
-    db.command("ping")
-    return {"ok": True}
-
-@bp.post("/items")
-def create_item():
-    data = request.get_json(force=True)
-    res = db.items.insert_one({"name": data["name"]})
-    return {"id": str(res.inserted_id)}, 201
-
-@bp.get("/items")
-def list_items():
-    items = list(db.items.find().limit(50))
-    for it in items:
-        it["_id"] = str(it["_id"])
-    return {"items": items}
-
-@bp.delete("/items/<item_id>")
-def delete_item(item_id):
-    res = db.items.delete_one({"_id": ObjectId(item_id)})
-    return {"deleted": res.deleted_count}
-
-def normalize_password(pw: str) -> str:
-    pw = pw.strip()
-    if len(pw.encode("utf-8")) > 72:
-        raise ValueError("Password too long (max 72 bytes).")
-    return pw
+    return render_template(
+        "result.html",
+        meal_plan=meal_plan
+    )
