@@ -5,7 +5,7 @@ import json
 # 1. SETUP
 # Replace 'TopSecretAPIKey' with your actual key from AI Studio
 # ---------------------------------------------------------
-client = genai.Client(api_key="AIzaSyDPG8G6gUJSZ5J1qewGsBtm85bAplBA3CE")
+client = genai.Client(api_key="AIzaSyBuTuFaI8UIuw2WExVV8wcb52tXp-MDN1w")
 
 # ---------------------------------------------------------
 # 2. THE CONTEXT (Your Menu Data)
@@ -67,10 +67,10 @@ menu_data = [
   }
 ]
 
-def generate_menu_for_tdee(tdee: int) -> str:
-    """
-    Given a TDEE calorie target, ask Gemini to recommend a meal plan.
-    """
+#def generate_menu_for_tdee(tdee: int) -> str:
+#    """
+#    Given a TDEE calorie target, ask Gemini to recommend a meal plan.
+#    """
 # ---------------------------------------------------------
 # 3. THE USER INPUT
 # This simulates what a user might type into your app.

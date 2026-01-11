@@ -1,8 +1,10 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, session, jsonify
 from .db import db
 from bson.objectid import ObjectId
 from passlib.hash import bcrypt
 from datetime import datetime, timezone
+import json
+from .gemini_service import generate_meal_plan
 
 bp = Blueprint("main", __name__)
 
@@ -55,6 +57,7 @@ def submit():
     height = float(request.form.get("height", 0))
     activity = request.form.get("activityLevel")
     goal = request.form.get("goal")
+    dietary_restrictions = request.form.getlist("dietaryRestrictions")
     
     # BMR calculation (assuming gender-neutral for simplicity)
     bmr = 10 * weight + 6.25 * height - 5 * age + 5  # +5 for men, -161 for women if gender included
@@ -77,8 +80,71 @@ def submit():
     # maintain → leave unchanged
 
     tdee = round(tdee)
+    
+    # Store user data in session for later use
+    session['user_profile'] = {
+        'age': age,
+        'weight': weight,
+        'height': height,
+        'activity_level': activity,
+        'goal': goal,
+        'dietary_restrictions': dietary_restrictions,
+        'target_calories': tdee
+    }
 
     return render_template("result.html", calories=tdee)
+
+@bp.post("/meals")
+def generate_meals():
+    """
+    Process meal selections and generate personalized meal plan using Gemini
+    """
+    # Get user profile from session
+    user_profile = session.get('user_profile', {})
+    
+    if not user_profile:
+        return {"error": "User profile not found. Please start over."}, 400
+    
+    # Get meal selections from form
+    meal_swipes = request.form.get("meal_swipes")
+    
+    # Collect all meal selections
+    meals = []
+    for i in range(1, int(meal_swipes) + 1):
+        meal = {
+            'number': i,
+            'dining_hall': request.form.get(f"meal_{i}_hall"),
+            'meal_type': request.form.get(f"meal_{i}_type")
+        }
+        meals.append(meal)
+    
+    # Prepare data for Gemini
+    request_data = {
+        'user_profile': user_profile,
+        'meals': meals,
+        'meal_count': int(meal_swipes)
+    }
+    
+    # Call Gemini service to generate meal plan
+    try:
+        meal_plan = generate_meal_plan(request_data)
+        
+        # Store the meal plan in session or return it
+        session['meal_plan'] = meal_plan
+        
+        # For now, return JSON for testing
+        # Later you'll render a template with this data
+        return jsonify({
+            'success': True,
+            'meal_plan': meal_plan,
+            'request_data': request_data  # Include for debugging
+        })
+        
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
 
 @bp.get("/health")
 def health():
