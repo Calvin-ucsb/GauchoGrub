@@ -66,6 +66,11 @@ menu_data = [
     ]
   }
 ]
+
+def generate_menu_for_tdee(tdee: int) -> str:
+    """
+    Given a TDEE calorie target, ask Gemini to recommend a meal plan.
+    """
 # ---------------------------------------------------------
 # 3. THE USER INPUT
 # This simulates what a user might type into your app.
